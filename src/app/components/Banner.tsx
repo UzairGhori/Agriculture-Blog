@@ -19,7 +19,7 @@ const Banner: React.FC = () => {
             {/* Banner Content */}
             <div className="relative z-20 text-center px-6">
                 <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
-                    Welcome to the Agriculture Blog
+                    Welcome to the AgriBlog
                 </h1>
                 <p className="text-lg mb-6 max-w-xl mx-auto">
                     Explore the latest insights and innovations in sustainable agriculture practices.

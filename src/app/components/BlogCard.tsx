@@ -23,6 +23,18 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
                     Read More
                 </button>
             </Link>
+<br /><br />
+            {/* Author Section */}
+            <div className="flex items-center mt-4">
+                <Image
+                    src={post.authorImage || '/default-author-image.jpg'}
+                    alt={post.authorName || 'Default Author'}
+                    width={40}
+                    height={40}
+                    className="w-10 h-10 rounded-full mr-3"
+                />
+                <p className="text-gray-500 font-semibold">{post.authorName}</p>
+            </div>
         </div>
     );
 };

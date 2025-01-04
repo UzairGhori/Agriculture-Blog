@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Comment {
   name: string;
@@ -10,12 +10,24 @@ const CommentSection: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [comment, setComment] = useState<string>('');
 
+  // Load comments from local storage on component mount
+  useEffect(() => {
+    const storedComments = localStorage.getItem('comments');
+    if (storedComments) {
+      setComments(JSON.parse(storedComments));
+    }
+  }, []);
+
   const handleCommentSubmit = () => {
     if (name && comment) {
       const newComment: Comment = { name, text: comment };
-      setComments([newComment, ...comments]); // Add new comment at the top of the list
+      const updatedComments = [newComment, ...comments]; // Add new comment at the top of the list
+      setComments(updatedComments);
       setName('');
       setComment('');
+      
+      // Save updated comments to local storage
+      localStorage.setItem('comments', JSON.stringify(updatedComments));
     }
   };
 

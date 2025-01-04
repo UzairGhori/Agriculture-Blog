@@ -18,7 +18,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <main className="flex flex-col justify-center items-center mt-5 p-6 min-h-screen">
-      <h1 className="text-6xl font-bold mb-4 text-center animate-bounce">Contact Us</h1>
+      <h1 className="text-6xl font-bold mb-4 text-center font-[Poppins] animate-bounce">Contact Us</h1>
       <p className="text-lg mb-6 text-center">
         Have questions or feedback? We&apos;d love to hear from you! Please use the form below to get in touch with us, <br /> and we&apos;ll get back to you as soon as possible.
       </p>
