@@ -5,7 +5,7 @@ import Banner from './components/Banner';
 
 const Home = () => {
     return (
-        <div className="p-10">
+        <div className="w-screen ">
            <Banner />
 
 {/* Blog Section */}
